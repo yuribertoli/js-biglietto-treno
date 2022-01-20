@@ -10,7 +10,7 @@ const pricePerKm = 0.21;
 let priceTicket = kmToRun * pricePerKm;
 
 // Inserisco il dato nell'HTML
-document.getElementById("price").innerHTML = priceTicket;
+document.getElementById("price").innerHTML = priceTicket.toFixed(2);
 
 // Definisco gli sconti
 const discountUnderAge = 0.2;
@@ -27,10 +27,10 @@ let elderlySavings = priceTicket * discountOver65;
 // Creo la variabile prima per minorenni poi per anziani
 if (agePassenger < ageAdult){
     priceDiscounted = priceTicket - (priceTicket * discountUnderAge); 
-    document.getElementById("price").innerHTML = priceDiscounted;
-    document.getElementById("wow").innerHTML = `Wow! Hai risparmiato ben ${underAgeSavings}€ grazie al nostro sconto!`;
+    document.getElementById("price").innerHTML = priceDiscounted.toFixed(2);
+    document.getElementById("wow").innerHTML = `Wow! Hai risparmiato ben ${underAgeSavings.toFixed(2)}€ grazie al nostro sconto!`;
 } else if (agePassenger >= ageElderly) {
     priceDiscounted = priceTicket - (priceTicket * discountOver65); 
-    document.getElementById("price").innerHTML = priceDiscounted;
-    document.getElementById("wow").innerHTML = `Wow! Hai risparmiato ben ${elderlySavings}€ grazie al nostro sconto!`;
+    document.getElementById("price").innerHTML = priceDiscounted.toFixed(2);
+    document.getElementById("wow").innerHTML = `Wow! Hai risparmiato ben ${elderlySavings.toFixed(2)}€ grazie al nostro sconto!`;
 }
