@@ -27,10 +27,10 @@ let numeroComputer = (Math.floor(Math.random() * 10) + 1) * (Math.floor(Math.ran
 let risultato = numeroComputer + sceltaNumero;
 
 //rendo le scritture di pari e dispari più comuni giocabili
-switch (pariDispari) {
-    case "Pari": 
-        pariDispari = "pari";
-        break;
+switch (pariDispari) {                  //if (pariDispari)
+    case "Pari":                          // = "Pari"
+        pariDispari = "pari";               // pariDispari = "pari"   
+        break;                              
     case "PARI": 
         pariDispari = "pari";
         break;
@@ -59,4 +59,6 @@ if (risultato % 2 == 1 && pariDispari == "pari") {
 }   else {
     document.getElementById("fine").innerHTML = "C'è stato un errore di sintassi, riprova riscrivendo solo pari o dispari alla seconda domanda";
 }
+
+
 
