@@ -42,23 +42,19 @@ switch (pariDispari) {                  //if (pariDispari)
         break;
 }
 
-//controllo se è un numero pari
+//controllo se è un numero pari o dispari
 if (risultato % 2 == 0 && pariDispari == "pari") {
     document.getElementById("fine").innerHTML = `Il numero che hai scelto era ${sceltaNumero} e il numero scelto dal computer era ${numeroComputer}, visto che hai scelto ${pariDispari}, HAI VINTO!!`;
 }   else if (risultato % 2 == 0 && pariDispari == "dispari") {
     document.getElementById("fine").innerHTML = `Il numero che hai scelto era ${sceltaNumero} e il numero scelto dal computer era ${numeroComputer}, visto che hai scelto ${pariDispari}, HAI PERSO!!`;
-}   else {
-    document.getElementById("fine").innerHTML = "C'è stato un errore di sintassi, riprova riscrivendo solo pari o dispari alla seconda domanda";
-}
-
-// controllo se è un numero dispari
-if (risultato % 2 == 1 && pariDispari == "pari") {
+}   else if (risultato % 2 != 0 && pariDispari == "pari") {
     document.getElementById("fine").innerHTML = `Il numero che hai scelto era ${sceltaNumero} e il numero scelto dal computer era ${numeroComputer}, visto che hai scelto ${pariDispari}, HAI PERSO!!`;
-}   else if (risultato % 2 == 1 && pariDispari == "dispari") {
+}   else if (risultato % 2 != 0 && pariDispari == "dispari") {
     document.getElementById("fine").innerHTML = `Il numero che hai scelto era ${sceltaNumero} e il numero scelto dal computer era ${numeroComputer}, visto che hai scelto ${pariDispari}, HAI VINTO!!`;
 }   else {
     document.getElementById("fine").innerHTML = "C'è stato un errore di sintassi, riprova riscrivendo solo pari o dispari alla seconda domanda";
 }
+
 
 
 
