@@ -10,7 +10,7 @@ const pricePerKm = 0.21;
 let priceTicket = kmToRun * pricePerKm;
 
 // Inserisco il dato nell'HTML
-document.getElementById("price").innerHTML = priceTicket.toFixed(2);
+document.getElementById("price").innerHTML = priceTicket.toFixed(2); //uso massimo 2 decimali
 
 // Definisco gli sconti
 const discountUnderAge = 0.2;
