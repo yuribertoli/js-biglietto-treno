@@ -9,7 +9,7 @@ let pariDispari = prompt("Scegli pari o dispari?");
 
 //se il numero inserito non è corretto, fornisco numero errore e numero standard
 if (sceltaNumero < 1 || sceltaNumero > 100) {
-    sceltaNumero = 50;
+    sceltaNumero = (Math.floor(Math.random() * 10) + 1) * (Math.floor(Math.random() * 10) + 1);
     alert(`Il numero scelto non è corretto, per giocare quindi ti verrà assegnato il numero ${sceltaNumero}`);
 }
 
